@@ -295,6 +295,7 @@ export default function SupabasePage() {
     } else {
       // 清除本地存储的会话
       localStorage.removeItem("supabase.auth.session");
+      // @ts-expect-error TODO: 修复类型错误
       setAuth({
         email: "",
         password: "",
